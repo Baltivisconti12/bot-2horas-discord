@@ -37,7 +37,7 @@ client.once('ready', () => {
         embeds: [embed],
       });
     }
-  }, 60 * 1000); // Cada 1 minuto para pruebas
+  }, 2 * 60 * 60 * 1000); // Cada 2 horas
 });
 
 app.get('/', (req, res) => {
