@@ -1,4 +1,4 @@
-const { Client, GatewayIntentBits } = require('discord.js');
+const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const express = require('express');
 const app = express();
 
@@ -19,9 +19,25 @@ client.once('ready', () => {
   setInterval(() => {
     const channel = client.channels.cache.get(CHANNEL_ID);
     if (channel) {
-      channel.send('⏰ ¡Mensaje automático cada 2 horas!');
+      const embed = {
+        title: "<:cabiflylogo:1353539280923787274> Actividad en 10 minutos! <:cabiflylogo:1353539280923787274>",
+        description:
+          "## 🚌┃**Bus Urbano (Ruta A)**.\n✨┃Actividad #1.\n🗓️┃Siguiente Actividad:\n⏱️┃01:00 - 02:00 <:gtahub:1353557954565242920> | Traslado de cliente VIP.",
+        color: 13434624,
+        footer: {
+          text: "Cabifly Co. | Nunca dejes de moverte."
+        },
+        image: {
+          url: "https://i.imgur.com/IvQGzKt.png"
+        }
+      };
+
+      channel.send({
+        content: "<@&1353466885307629638>",
+        embeds: [embed],
+      });
     }
-  }, 60 * 1000); // Cada 2 horas
+  }, 60 * 1000); // Cada 1 minuto para pruebas
 });
 
 app.get('/', (req, res) => {
