@@ -20,20 +20,20 @@ client.once('ready', () => {
     const channel = client.channels.cache.get(CHANNEL_ID);
     if (channel) {
       const embed = {
-        title: "<:cabiflylogo:1353539280923787274> Actividad en 10 minutos! <:cabiflylogo:1353539280923787274>",
+        title: "🪴 Hay que regar las plantas! 🚿",
         description:
-          "## 🚌┃**Bus Urbano (Ruta A)**.\n✨┃Actividad #1.\n🗓️┃Siguiente Actividad:\n⏱️┃01:00 - 02:00 <:gtahub:1353557954565242920> | Traslado de cliente VIP.",
+          "- No te olvides de regar las plantas, tienen sed. Tienes un rociador en la caja de herramientas roja. GRACIAS :D",
         color: 13434624,
         footer: {
-          text: "Cabifly Co. | Nunca dejes de moverte."
+          text: "I S R."
         },
         image: {
-          url: "https://i.imgur.com/IvQGzKt.png"
+          url: "https://i.imgur.com/zgqPeW7.jpeg"
         }
       };
 
       channel.send({
-        content: "<@&1353466885307629638>",
+        content: "<@&1357128921727897642>",
         embeds: [embed],
       });
     }
