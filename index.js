@@ -21,7 +21,7 @@ client.once('ready', () => {
     if (channel) {
       channel.send('⏰ ¡Mensaje automático cada 2 horas!');
     }
-  }, 2 * 60 * 60 * 1000); // Cada 2 horas
+  }, 60 * 1000); // Cada 2 horas
 });
 
 app.get('/', (req, res) => {
